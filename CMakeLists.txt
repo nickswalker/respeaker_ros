@@ -30,4 +30,6 @@ install(FILES requirements.txt
 if (CATKIN_ENABLE_TESTING)
   catkin_add_nosetests(test/test_installed.py
     DEPENDENCIES ${PROJECT_NAME}_generate_virtualenv)
+  find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(launch)
 endif()
